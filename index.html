@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Orbital molecular CH2O</title>
+  <title>Orbital CH2O</title>
   <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
 </head>
 <body>
 
-<h2>Visualizador de orbital molecular (.cub)</h2>
+<h3>Visualizador del orbital molecular de CH<sub>2</sub>O</h3>
 <div id="jsmolContainer" style="width: 500px; height: 500px;"></div>
 
 <script type="text/javascript">
@@ -17,7 +17,7 @@
     use: "HTML5",
     j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s",
     script: `
-      load https://raw.githubusercontent.com/IFP2301/ch20_2603/refs/heads/main/CH20_2603_mo8.cub;
+      load CH20_2603_mo8.cub;
       isosurface pos positive color red;
       isosurface neg negative color blue;
     `,
