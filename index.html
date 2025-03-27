@@ -30,8 +30,8 @@
     j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s",
     script: `
       load CH20_2603_mo8.cub;
-      isosurface positive "CH20_2603_mo8.cub" cutoff 0.01 color [0,255,0] translucent 0.3;
-      isosurface negative "CH20_2603_mo8.cub" cutoff -0.01 color [255,0,0] translucent 0.3;
+      isosurface positive "CH20_2603_mo8.cub" cutoff 0.000001 color [0,255,0] translucent 0.3;
+      isosurface negative "CH20_2603_mo8.cub" cutoff -0.000001 color [255,0,0] translucent 0.3;
     `,
     debug: false
   };
