@@ -2,13 +2,25 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Orbital CH2O</title>
+  <title>Visor de orbitales moleculares de: Formaldehido</title>
   <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
+ <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: white;
+    }
+    #jsmolContainer {
+      margin: auto;
+      width: 500px;
+      height: 500px;
+    }
+  </style>
 </head>
 <body>
 
-<h3>Visualizador del orbital molecular de CH<sub>2</sub>O</h3>
-<div id="jsmolContainer" style="width: 500px; height: 500px;"></div>
+<h2>Visor de orbitales moleculares de: formaldehído</h2>
+<div id="jsmolContainer"></div>
 
 <script type="text/javascript">
   var Info = {
@@ -18,8 +30,8 @@
     j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s",
     script: `
       load CH20_2603_mo8.cub;
-      isosurface positiva "CH20_2603_mo8.cub" cutoff 0.001 color [0,255,0] translucent 0.3;
-      isosurface negativa "CH20_2603_mo8.cub" cutoff -0.001 color red trasnlucent 0.3;
+      isosurface positive "CH20_2603_mo8.cub" cutoff 0.01 color [0,255,0] translucent 0.3;
+      isosurface negative "CH20_2603_mo8.cub" cutoff -0.01 color [255,0,0] translucent 0.3;
     `,
     debug: false
   };
