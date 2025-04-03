@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Orbital CH2O</title>
+  <meta charset="UTF-8">
+  <title>Visualizador de Orbital Molecular - CH₂O</title>
   <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      background-color: #f5f5f5;
+    }
+    #viewer {
+      width: 500px;
+      height: 500px;
+      margin: auto;
+    }
+  </style>
 </head>
 <body>
+  <h2>Orbital molecular visualizado en JSmol</h2>
+  <div id="viewer"></div>
 
-<h3>Visualizador del orbital molecular de CH<sub>2</sub>O</h3>
-<div id="jsmolContainer" style="width: 500px; height: 500px;"></div>
-
-<script type="text/javascript">
-  var Info = {
-    width: 500,
-    height: 500,
-    use: "HTML5",
-    j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s",
-    script: `
-      load CH20_2603_mo8.cub;
-      isosurface pos "CH20_2603_mo8.cub color red cutoff 0.005;
-      isosurface neg "CH20_2603_mo8.cub color blue cutoff -0.005;
-    `,
-    debug: false
-  };
-  Jmol.getApplet("jsmolApplet0", Info);
-</script>
-
+  <script type="text/javascript">
+    const Info = {
+      width: 500,
+      height: 500,
+      debug: false,
+      color: "#FFFFFF",
+      addSelectionOptions: false,
+      use: "HTML5",
+      j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s",
+      script: `
+        load CH2O_0304.Alpha_1.0.cube;
+        isosurface MO1 color red translucent 0.4;
+        isosurface MO2 sign color blue translucent 0.4;
+        spin on;
+      `
+    };
+    Jmol.getApplet("jmolApplet0", Info);
+  </script>
 </body>
 </html>
